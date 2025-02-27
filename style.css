@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+body {
+    background: linear-gradient(to right, #ff9966, #ff5e62);
+    text-align: center;
+    overflow: hidden;
+}
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    font-size: 50px;
+    color: white;
+    text-shadow: 0 0 20px yellow;
+    animation: glow 2s infinite alternate;
+}
+@keyframes glow {
+    0% { text-shadow: 0 0 10px yellow; }
+    100% { text-shadow: 0 0 30px red; }
+}
+input, button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+}
+button {
+    background: gold;
+    cursor: pointer;
+}
+.gift-box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    background: red;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.gift-box .lid {
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    background: darkred;
+    top: -10px;
+    left: 0;
+    transition: 0.5s;
+}
+.gift-box p {
+    color: white;
+    font-size: 14px;
+    margin-top: 40px;
+}
+#balloons {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
